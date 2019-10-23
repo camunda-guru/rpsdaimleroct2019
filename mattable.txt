@@ -1,0 +1,32 @@
+<mat-table [dataSource]="tableSource" matSort id="contentToConvert">
+
+  <ng-container matColumnDef="adharCardNo">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> AdharCard No </mat-header-cell>
+    <mat-cell *matCellDef="let elem"> {{elem.adharCardNo}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="firstName">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> First Name </mat-header-cell>
+    <mat-cell *matCellDef="let elem"> {{elem.firstName}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="lastName">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </mat-header-cell>
+    <mat-cell *matCellDef="let elem"> {{elem.lastName}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+    <mat-cell *matCellDef="let elem"> {{elem.email}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="mobileNo">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Mobile No </mat-header-cell>
+    <mat-cell *matCellDef="let elem"> {{elem.mobileNo}} </mat-cell>
+  </ng-container>
+  
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>
+<mat-paginator [pageSizeOptions]="[3,5,7, 10, 20]" showFirstLastButtons></mat-paginator>
+
+
+
