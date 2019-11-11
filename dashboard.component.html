@@ -1,0 +1,11 @@
+<section class="feed">
+  <!--parent and child property binding -->
+  <app-dashboard-feed-title [titleData]="message">
+
+  </app-dashboard-feed-title>
+  <mat-form-field>
+    <input matInput [(ngModel)]="name" placeholder="Enter your Name" />
+  </mat-form-field>
+  <app-dashboard-feed (capitalize)="convert()" > </app-dashboard-feed>
+  <p-chart type="line" [data]="data"></p-chart>
+</section>
